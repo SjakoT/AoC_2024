@@ -46,8 +46,8 @@ public class Helpers {
 	
 	/**
 	 * Sorts an int[] in numerical order.
-	 * @param array int[] to be sorted
-	 * @return The numerically sorted int[]
+	 * @param array int[] to be sorted.
+	 * @return The numerically sorted int[].
 	 */
 	public static int[] sortIntArray(int[] array) {
 		if (array != null) {
@@ -79,5 +79,28 @@ public class Helpers {
 		}
 		
 		return null;
+	}
+	
+	/**
+	 * Counts the number of times a given value exists in an int[].
+	 * @param value The value to count.
+	 * @param array The int[] to search in.
+	 * @return Number of occurrences. Returns -1 if array == null.
+	 */
+	public static int countIntOccurrences(int value, int[] array) {
+		if (array != null) {
+			int counter = 0;
+			
+			for (int i = 0; i < array.length; i++) {
+				int arrayValue = array[i];
+				if (value == arrayValue) {
+					counter++;
+				}
+			}
+			
+			return counter;
+		}
+		
+		return -1;
 	}
 }
